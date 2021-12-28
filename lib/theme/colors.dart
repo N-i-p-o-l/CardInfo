@@ -14,4 +14,6 @@ class AppColors {
   static const title = Color(0xFF242323);
   static const description = Color(0xFF9CA5BF);
   static const white = Color(0xFFFFFFFF);
+
+  static const cardColor = Color(0xFFE5E7EB);
 }

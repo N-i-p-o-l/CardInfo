@@ -1,4 +1,8 @@
 {
-  "app_name": "CardInfo app"
- 
+  "app_name": "CardInfo app",
+
+  "select_input_mode": "Select input mode",
+  "you_can_choose": "You can choose to enter manually or scan\nwith your phone",
+  "manual": "Manual",
+  "scan": "Scan"
 }

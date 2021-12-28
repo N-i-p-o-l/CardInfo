@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:card_info/presentation/screens/input_mode_screen.dart';
+import 'package:card_info/presentation/screens/inputmode/input_mode_screen.dart';
 
 export 'package:auto_route/auto_route.dart';
 export 'routes.gr.dart';
