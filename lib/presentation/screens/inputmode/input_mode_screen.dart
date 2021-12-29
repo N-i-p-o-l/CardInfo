@@ -1,3 +1,4 @@
+import 'package:card_info/presentation/routes/routes.dart';
 import 'package:card_info/theme/spacing.dart';
 import 'package:card_info/theme/typography.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -36,7 +37,9 @@ class InputModeScreen extends StatelessWidget {
                       ActionButton(
                         icon: Icons.keyboard,
                         localeKey: 'manual',
-                        onPressed: () {},
+                        onPressed: () {
+                          context.router.push(const ManualInputRoute());
+                        },
                       ),
                       ActionButton(
                         icon: Icons.credit_card_rounded,
