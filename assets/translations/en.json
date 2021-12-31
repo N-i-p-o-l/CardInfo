@@ -4,5 +4,8 @@
   "select_input_mode": "Select input mode",
   "you_can_choose": "You can choose to enter manually or scan\nwith your phone",
   "manual": "Manual",
-  "scan": "Scan"
+  "scan": "Scan",
+  "card_number": "Card number",
+  "input_number_desc": "Enter your the number as it appears on your credit card",
+  "next": "Next"
 }

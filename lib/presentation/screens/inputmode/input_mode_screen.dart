@@ -13,7 +13,7 @@ class InputModeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(AppSpacings.xl),
+        padding: const EdgeInsets.all(AppSpacings.xxl),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,

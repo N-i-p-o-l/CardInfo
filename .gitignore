@@ -118,4 +118,6 @@ app.*.symbols
 !/dev/ci/**/Gemfile.lock
 
 # Generated Dart files  
+**.g.dart**
 **.gr.dart**
+**.config.dart**
