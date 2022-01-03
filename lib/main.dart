@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 
 Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
   configureInjection(Environment.dev);

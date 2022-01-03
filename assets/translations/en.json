@@ -7,5 +7,6 @@
   "scan": "Scan",
   "card_number": "Card number",
   "input_number_desc": "Enter your the number as it appears on your credit card",
-  "next": "Next"
+  "next": "Next",
+  "upcoming": "Coming soon..."
 }

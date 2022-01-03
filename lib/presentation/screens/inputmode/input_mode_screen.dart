@@ -12,45 +12,53 @@ class InputModeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(AppSpacings.xxl),
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: AppSpacings.xxl),
-              Text(
-                tr('select_input_mode'),
-                style: AppTypography.headline6,
-              ),
-              const SizedBox(height: AppSpacings.xl),
-              Text(
-                tr('you_can_choose'),
-                textAlign: TextAlign.center,
-                style: AppTypography.caption,
-              ),
-              Expanded(
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ActionButton(
-                        icon: Icons.keyboard,
-                        localeKey: 'manual',
-                        onPressed: () {
-                          context.router.push(const ManualInputRoute());
-                        },
-                      ),
-                      ActionButton(
-                        icon: Icons.credit_card_rounded,
-                        localeKey: 'scan',
-                        onPressed: () {},
-                      ),
-                    ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(AppSpacings.xxl),
+          child: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: AppSpacings.xxl),
+                Text(
+                  tr('select_input_mode'),
+                  style: AppTypography.headline6,
+                ),
+                const SizedBox(height: AppSpacings.xl),
+                Text(
+                  tr('you_can_choose'),
+                  textAlign: TextAlign.center,
+                  style: AppTypography.caption,
+                ),
+                Expanded(
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ActionButton(
+                          icon: Icons.keyboard,
+                          localeKey: 'manual',
+                          onPressed: () {
+                            context.router.push(const ManualInputRoute());
+                          },
+                        ),
+                        ActionButton(
+                          icon: Icons.credit_card_rounded,
+                          localeKey: 'scan',
+                          onPressed: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(tr('upcoming')),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
