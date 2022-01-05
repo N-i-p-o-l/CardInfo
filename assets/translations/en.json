@@ -8,5 +8,7 @@
   "card_number": "Card number",
   "input_number_desc": "Enter your the number as it appears on your credit card",
   "next": "Next",
-  "upcoming": "Coming soon..."
+  "upcoming": "Coming soon...",
+  "card_invalid": "Card number is invalid",
+  "field_required": "This field is required"
 }

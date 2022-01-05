@@ -18,6 +18,10 @@ Future main() async {
     ),
   );
 
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
   runApp(
     EasyLocalization(
       path: 'assets/translations',
