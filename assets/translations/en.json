@@ -10,5 +10,6 @@
   "next": "Next",
   "upcoming": "Coming soon...",
   "card_invalid": "Card number is invalid",
-  "field_required": "This field is required"
+  "field_required": "This field is required",
+  "card_info_title": "Card Info"
 }

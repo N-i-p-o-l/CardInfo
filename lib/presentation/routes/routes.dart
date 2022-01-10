@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:card_info/presentation/screens/screens.dart';
-import 'package:card_info/presentation/screens/splash/splash_screen.dart';
 
 export 'package:auto_route/auto_route.dart';
 export 'routes.gr.dart';

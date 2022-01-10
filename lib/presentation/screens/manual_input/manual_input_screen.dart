@@ -1,4 +1,4 @@
-import 'package:card_info/common/text/card_input_number_formatter.dart';
+import 'package:card_info/common/text/card_input_number.dart';
 import 'package:card_info/common/utils/card_utils.dart';
 import 'package:card_info/presentation/routes/routes.dart';
 import 'package:card_info/theme/colors.dart';
