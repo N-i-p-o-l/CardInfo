@@ -5,9 +5,12 @@ import 'package:injectable/injectable.dart';
 @Singleton(as: CardInfoRepository)
 class CardInfoRepositoryImpl extends CardInfoRepository {
   @override
-  Future<Result> fetchCardInfo({required String number}) {
-    // TODO: implement fetchCardInfo
-    throw UnimplementedError();
-  }
+  Future<Result> fetchCardInfo({required String number}) async {
+    try {
+      return const Result.loading();
+    } catch (error) {
+      return Result.error(error.toString());
+    }
 
+  }
 }

@@ -9,7 +9,7 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
-  configureInjection(Environment.dev);
+  configureDependencies();
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
