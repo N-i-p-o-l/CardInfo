@@ -2,6 +2,7 @@ import 'package:card_info/common/text/card_input_number.dart';
 import 'package:card_info/common/utils/card_utils.dart';
 import 'package:card_info/core/data/result.dart';
 import 'package:card_info/di/di.dart';
+import 'package:card_info/domain/entities/card_info.dart';
 import 'package:card_info/domain/repositories/card_info_repository.dart';
 import 'package:card_info/presentation/routes/routes.dart';
 import 'package:card_info/presentation/screens/manual_input/bloc/manual_input_cubit.dart';
@@ -160,6 +161,9 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
                   }
                   else if (state is Success) {
                     //TODO: Go to the card info screen 
+                    final CardInfo cardInfo = state.data as CardInfo;
+
+                    debugPrint(cardInfo.type);
                   }
                   else if (state is ResultError) {
                     final String msg = state.message ?? 'error';
