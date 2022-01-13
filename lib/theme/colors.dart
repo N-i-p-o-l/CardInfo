@@ -16,4 +16,5 @@ class AppColors {
   static const white = Color(0xFFFFFFFF);
 
   static const cardColor = Color(0xFFE5E7EB);
+  static const creditCardColor = Color(0xFF6200EE);
 }

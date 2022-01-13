@@ -4,6 +4,6 @@ import 'package:injectable/injectable.dart';
 
 @module
 abstract class RegisterCoreDependencies {
-  final Dio dio = Dio();
+  final Dio dio = Dio()..interceptors.add(LogInterceptor());
   final AppRouter appRouter = AppRouter();
 }

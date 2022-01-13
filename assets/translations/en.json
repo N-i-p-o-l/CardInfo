@@ -11,5 +11,7 @@
   "upcoming": "Coming soon...",
   "card_invalid": "Card number is invalid",
   "field_required": "This field is required",
-  "card_info_title": "Card Info"
+  "card_info_title": "Card Info",
+  "bank_title": "Bank",
+  "country_title": "Country"
 }

@@ -12,6 +12,7 @@ export 'routes.gr.dart';
     AutoRoute(page: SplashScreen, initial: true),
     AutoRoute(page: InputModeScreen),
     AutoRoute(page: ManualInputScreen),
+    AutoRoute(page: CardInfoScreen),
   ],
 )
 
