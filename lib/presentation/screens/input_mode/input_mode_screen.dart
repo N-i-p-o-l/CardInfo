@@ -14,10 +14,22 @@ class InputModeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(AppSpacings.xxl),
+          padding: const EdgeInsets.all(0.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Align(
+                alignment: Alignment.centerRight,
+                child: InkWell(
+                  child: const Padding(
+                    padding: EdgeInsets.all(AppSpacings.l),
+                    child: Icon(Icons.settings),
+                  ),
+                  onTap: () {
+                    context.router.push(const SettingsRoute());
+                  },
+                ),
+              ),
               const SizedBox(height: AppSpacings.xxl),
               Text(
                 tr('select_input_mode'),

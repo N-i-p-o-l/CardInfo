@@ -189,4 +189,10 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _cardInputController.dispose();
+  }
 }

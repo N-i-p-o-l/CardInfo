@@ -13,5 +13,8 @@
   "field_required": "This field is required",
   "card_info_title": "Card Info",
   "bank_title": "Bank",
-  "country_title": "Country"
+  "country_title": "Country",
+  "dark_mode_title": "Dark mode",
+  "settings_title": "Settings",
+  "version_title": "Version"
 }

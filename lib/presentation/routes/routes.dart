@@ -11,6 +11,7 @@ export 'routes.gr.dart';
   routes: <AutoRoute>[
     AutoRoute(page: SplashScreen, initial: true),
     AutoRoute(page: InputModeScreen),
+    AutoRoute(page: SettingsScreen),
     AutoRoute(page: ManualInputScreen),
     AutoRoute(page: CardInfoScreen),
   ],
