@@ -1,6 +1,3 @@
-import 'package:card_info/theme/colors.dart';
-import 'package:card_info/theme/spacing.dart';
-import 'package:card_info/theme/typography.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -22,13 +19,13 @@ class ActionButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         MaterialButton(
-          color: AppColors.cardColor,
+          color: Theme.of(context).cardColor,
           elevation: 2,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(4)),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(AppSpacings.xl),
+            padding: const EdgeInsets.all(16.0),
             child: Icon(
               icon,
               color: Colors.grey,
@@ -39,10 +36,10 @@ class ActionButton extends StatelessWidget {
             onPressed();
           },
         ),
-        const SizedBox(height: AppSpacings.s),
+        const SizedBox(height: 4.0),
         Text(
           tr(localeKey),
-          style: AppTypography.title,
+          style: Theme.of(context).textTheme.subtitle2,
         ),
       ],
     );

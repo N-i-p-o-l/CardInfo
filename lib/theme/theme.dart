@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import 'colors.dart';
-
-class AppTheme {
-
+class AppThemes {
   static const int _primaryColor = 0xFF6366F1;
   static const MaterialColor primarySwatch =
       MaterialColor(_primaryColor, <int, Color> {
@@ -38,22 +34,14 @@ class AppTheme {
   static final lightTheme = ThemeData(
     primarySwatch: primarySwatch,
     brightness: Brightness.light,
-    scaffoldBackgroundColor: Colors.white,
-    appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.white,
-      centerTitle: false,
-      elevation: 0,
-      titleTextStyle: GoogleFonts.montserrat(
-        fontSize: 17,
-        fontWeight: FontWeight.bold,
-        color: AppColors.title,
-      ),
-      iconTheme: const IconThemeData(color: AppColors.title),
-    ),
-    backgroundColor: Colors.white,
-    cardColor: AppColors.cardColor,
+    scaffoldBackgroundColor: textSwatch.shade100,
+    backgroundColor: textSwatch.shade100,
+    cardColor: Colors.white,
     bottomAppBarColor: Colors.white,
     dividerColor: const Color(0x1C000000),
+    appBarTheme: const AppBarTheme(
+      color: Color(0xFF4749EB),
+    ),
     textTheme: TextTheme(
       headline1: TextStyle(
         color: textSwatch.shade700,
@@ -96,21 +84,6 @@ class AppTheme {
         color: textSwatch.shade500,
       ),
     ),
-    colorScheme: ColorScheme.fromSwatch().copyWith(
-      secondary: const Color(0xff333333),
-      primary: const Color(0xff333333),
-    ),
-    textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: Color(0xff252525),
-      selectionHandleColor: Color(0xff252525),
-      selectionColor: Colors.black26,
-    ),
-    checkboxTheme: CheckboxThemeData(
-      fillColor: MaterialStateProperty.all(const Color(0xff252525)),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(40)),
-      ),
-    ),
   );
 
   static final darkTheme = lightTheme.copyWith(
@@ -119,6 +92,10 @@ class AppTheme {
     backgroundColor: const Color(0xFF24242a),
     cardColor: const Color(0xFF2f2f34),
     bottomAppBarColor: const Color(0xFF35353a),
+    dividerColor: const Color(0x1CFFFFFF),
+    appBarTheme: const AppBarTheme(
+      color: Color(0xFF4749EB),
+    ),
     textTheme: TextTheme(
       headline1: TextStyle(
         color: textSwatch.shade200,

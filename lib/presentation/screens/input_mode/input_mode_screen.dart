@@ -1,6 +1,4 @@
 import 'package:card_info/presentation/routes/routes.dart';
-import 'package:card_info/theme/spacing.dart';
-import 'package:card_info/theme/typography.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +18,7 @@ class InputModeScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: InkWell(
                 child: const Padding(
-                  padding: EdgeInsets.all(AppSpacings.l),
+                  padding: EdgeInsets.all(12.0),
                   child: Icon(Icons.settings),
                 ),
                 onTap: () {
@@ -28,16 +26,16 @@ class InputModeScreen extends StatelessWidget {
                 },
               ),
             ),
-            const SizedBox(height: AppSpacings.xxl),
+            const SizedBox(height: 24.0),
             Text(
               tr('select_input_mode'),
-              style: AppTypography.headline6,
+              style: Theme.of(context).textTheme.headline6,
             ),
-            const SizedBox(height: AppSpacings.xl),
+            const SizedBox(height: 16.0),
             Text(
               tr('you_can_choose'),
               textAlign: TextAlign.center,
-              style: AppTypography.caption,
+              style: Theme.of(context).textTheme.caption,
             ),
             Expanded(
               child: Center(

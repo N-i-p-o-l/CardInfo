@@ -1,8 +1,6 @@
 import 'package:card_info/domain/entities/card_info.dart';
 import 'package:card_info/presentation/screens/card_info/widgets/card_info.dart';
-import 'package:card_info/theme/colors.dart';
-import 'package:card_info/theme/spacing.dart';
-import 'package:card_info/theme/typography.dart';
+import 'package:card_info/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +24,7 @@ class CardInfoScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(AppSpacings.m),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               Expanded(
@@ -34,19 +32,18 @@ class CardInfoScreen extends StatelessWidget {
                   aspectRatio: 1.58,
                   child: Card(
                     elevation: 2,
-                    color: AppColors.creditCardColor,
+                    color: AppThemes.primarySwatch.shade800,
                     child: Center(
                       child: Text(
                         cardNumber,
                         textAlign: TextAlign.center,
-                        style: AppTypography
-                          .headline6.copyWith(color: AppColors.white),
+                        style: Theme.of(context).textTheme.headline6,
                       ),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: AppSpacings.s),
+              const SizedBox(height: 4.0),
               CardInfoWidget(
                 titleKey: 'card_info_title',
                 icon: Icons.credit_card_rounded,
@@ -54,7 +51,7 @@ class CardInfoScreen extends StatelessWidget {
                 desc: 'Type: ${cardInfo.type}',
                 onPressed: () {},             
               ),
-              const SizedBox(height: AppSpacings.s),
+              const SizedBox(height: 4.0),
               CardInfoWidget(
                 titleKey: 'bank_title',
                 icon: Icons.home_rounded,
@@ -62,7 +59,7 @@ class CardInfoScreen extends StatelessWidget {
                 desc: cardInfo.bank.url,
                 onPressed: () {},             
               ),
-              const SizedBox(height: AppSpacings.s),
+              const SizedBox(height: 4.0),
               CardInfoWidget(
                 titleKey: 'country_title',
                 icon: Icons.place_rounded,

@@ -1,6 +1,4 @@
 import 'package:card_info/presentation/screens/settings/provider/settings_notifier.dart';
-import 'package:card_info/theme/spacing.dart';
-import 'package:card_info/theme/typography.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +11,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenDartState extends State<SettingsScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,13 +19,16 @@ class _SettingsScreenDartState extends State<SettingsScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets
-            .fromLTRB(AppSpacings.xl, 0.0, AppSpacings.xxl, AppSpacings.xxl),
+          padding: const EdgeInsets.fromLTRB(16.0, 0.0, 24.0, 24.0),
           child: Consumer<SettingsNotifier>(
             builder: (context, notifier, child) => Column(
               children: [
-                Text(tr('settings_title'), style: AppTypography.headline4),
-                const SizedBox(height: AppSpacings.xxl),
+                const SizedBox(height: 24.0),
+                Text(
+                  tr('settings_title'),
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+                const SizedBox(height: 48.0),
                 Card(
                   elevation: 2,
                   color: Theme.of(context).cardColor,
@@ -49,7 +49,7 @@ class _SettingsScreenDartState extends State<SettingsScreen> {
                         const SizedBox(width: 16),
                         Text(
                           tr('dark_mode_title'),
-                          style: AppTypography.caption,
+                          style: Theme.of(context).textTheme.caption,
                         ),
                       ],
                     ),
@@ -58,8 +58,10 @@ class _SettingsScreenDartState extends State<SettingsScreen> {
                 Expanded(
                   child: Align(
                     alignment: Alignment.bottomCenter,
-                    child: Text(tr('version_title') + ' 1.0.0',
-                        style: AppTypography.headline6),
+                    child: Text(
+                      tr('version_title') + ' 1.0.0',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
                   ),
                 ),
               ],

@@ -1,6 +1,3 @@
-import 'package:card_info/theme/colors.dart';
-import 'package:card_info/theme/spacing.dart';
-import 'package:card_info/theme/typography.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -25,16 +22,15 @@ class CardInfoWidget extends StatelessWidget {
     return InkWell(
       child: Card(
         elevation: 2,
-        color: AppColors.white,
         child: Padding(
-          padding: const EdgeInsets.all(AppSpacings.m),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 tr(titleKey),
                 textAlign: TextAlign.start,
-                style: AppTypography.title,
+                style: Theme.of(context).textTheme.subtitle2,
               ),
               Row(
                 children: [
@@ -43,19 +39,19 @@ class CardInfoWidget extends StatelessWidget {
                     color: Colors.grey,
                     size: 64,
                   ),
-                  const SizedBox(width: AppSpacings.m),
+                  const SizedBox(width: 8.0),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         title.length > 16 ? title.substring(0, 16) + '...' : title,
                         textAlign: TextAlign.start,
-                        style: AppTypography.caption,
+                        style: Theme.of(context).textTheme.caption,
                       ),
                       Text(
                         desc.length > 16 ? desc.substring(0, 16) + '...' : desc,
                         textAlign: TextAlign.start,
-                        style: AppTypography.description,
+                        style: Theme.of(context).textTheme.subtitle2,
                       ),
                     ],
                   )

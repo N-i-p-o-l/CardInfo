@@ -26,7 +26,7 @@ class App extends StatelessWidget {
             supportedLocales: context.supportedLocales,
             routeInformationParser: _router.defaultRouteParser(),
             routerDelegate: _router.delegate(),
-            theme: notifier.darkMode ? AppTheme.darkTheme : AppTheme.lightTheme,
+            theme: notifier.darkMode ? AppThemes.darkTheme : AppThemes.lightTheme,
           );
         },
       ),

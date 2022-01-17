@@ -6,9 +6,6 @@ import 'package:card_info/domain/entities/card_info.dart';
 import 'package:card_info/domain/repositories/card_info_repository.dart';
 import 'package:card_info/presentation/routes/routes.dart';
 import 'package:card_info/presentation/screens/manual_input/bloc/manual_input_cubit.dart';
-import 'package:card_info/theme/colors.dart';
-import 'package:card_info/theme/spacing.dart';
-import 'package:card_info/theme/typography.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -45,7 +42,7 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets
-              .fromLTRB(AppSpacings.xl, 0.0, AppSpacings.xl, AppSpacings.xl),
+              .fromLTRB(16.0, 0.0, 16.0, 16.0),
             child: BlocBuilder<ManualInputScreenCubit, Result>(
               builder: (context, state) {
                 final cubit = context.watch<ManualInputScreenCubit>();
@@ -74,16 +71,16 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(height: AppSpacings.xxl),
+                          const SizedBox(height: 24.0),
                           Text(
                             tr('scan'),
-                            style: AppTypography.headline6,
+                            style: Theme.of(context).textTheme.headline6,
                           ),
-                          const SizedBox(height: AppSpacings.xl),
+                          const SizedBox(height: 16.0),
                           Text(
                             tr('input_number_desc'),
                             textAlign: TextAlign.center,
-                            style: AppTypography.caption,
+                            style: Theme.of(context).textTheme.caption,
                           ),
                           Flexible(
                             flex: 5,
@@ -119,14 +116,13 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
                                   Flexible(
                                     flex: 1,
                                     child: MaterialButton(
-                                      color: AppColors.cardColor,
                                       elevation: 2,
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(4)),
                                       ),
                                       child: const Padding(
-                                        padding: EdgeInsets.all(AppSpacings.m),
+                                        padding: EdgeInsets.all(8.0),
                                         child: Icon(
                                           Icons.arrow_back_rounded,
                                           color: Colors.black,
@@ -138,7 +134,7 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
                                       },
                                     ),
                                   ),
-                                  const SizedBox(width: AppSpacings.m),
+                                  const SizedBox(width: 8.0),
                                   Expanded(
                                     flex: 5,
                                     child: ElevatedButton(
@@ -146,8 +142,7 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
                                         primary: Colors.deepPurple,
                                       ),
                                       child: Padding(
-                                        padding:
-                                            const EdgeInsets.all(AppSpacings.m),
+                                        padding: const EdgeInsets.all(8.0),
                                         child: Text(tr('next')),
                                       ),
                                       onPressed: () {
