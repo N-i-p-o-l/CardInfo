@@ -44,7 +44,8 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
       child: Scaffold(
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(AppSpacings.xxl),
+            padding: const EdgeInsets
+              .fromLTRB(AppSpacings.xl, 0.0, AppSpacings.xl, AppSpacings.xl),
             child: BlocBuilder<ManualInputScreenCubit, Result>(
               builder: (context, state) {
                 final cubit = context.watch<ManualInputScreenCubit>();

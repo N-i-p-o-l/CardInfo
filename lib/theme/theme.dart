@@ -7,7 +7,7 @@ class AppTheme {
 
   static const int _primaryColor = 0xFF6366F1;
   static const MaterialColor primarySwatch =
-      MaterialColor(_primaryColor, <int, Color>{
+      MaterialColor(_primaryColor, <int, Color> {
     50: Color(0xFFECEDFD),
     100: Color(0xFFD0D1FB),
     200: Color(0xFFB1B3F8),
@@ -22,7 +22,7 @@ class AppTheme {
 
   static const int _textColor = 0xFF6B7280;
   static const MaterialColor textSwatch =
-      MaterialColor(_textColor, <int, Color>{
+      MaterialColor(_textColor, <int, Color> {
     50: Color(0xFFF9FAFB),
     100: Color(0xFFF3F4F6),
     200: Color(0xFFE5E7EB),
@@ -119,7 +119,6 @@ class AppTheme {
     backgroundColor: const Color(0xFF24242a),
     cardColor: const Color(0xFF2f2f34),
     bottomAppBarColor: const Color(0xFF35353a),
-    dividerColor: const Color(0x1CFFFFFF),
     textTheme: TextTheme(
       headline1: TextStyle(
         color: textSwatch.shade200,

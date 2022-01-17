@@ -22,7 +22,8 @@ class _SettingsScreenDartState extends State<SettingsScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(AppSpacings.m),
+          padding: const EdgeInsets
+            .fromLTRB(AppSpacings.xl, 0.0, AppSpacings.xxl, AppSpacings.xxl),
           child: Consumer<SettingsNotifier>(
             builder: (context, notifier, child) => Column(
               children: [
@@ -61,7 +62,6 @@ class _SettingsScreenDartState extends State<SettingsScreen> {
                         style: AppTypography.headline6),
                   ),
                 ),
-                const SizedBox(height: AppSpacings.xxl),
               ],
             ),
           ),
