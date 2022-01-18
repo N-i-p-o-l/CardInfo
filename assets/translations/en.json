@@ -16,5 +16,6 @@
   "country_title": "Country",
   "dark_mode_title": "Dark mode",
   "settings_title": "Settings",
-  "version_title": "Version"
+  "version_title": "Version",
+  "error": "Error"
 }

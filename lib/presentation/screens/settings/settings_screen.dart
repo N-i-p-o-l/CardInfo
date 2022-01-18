@@ -19,7 +19,7 @@ class _SettingsScreenDartState extends State<SettingsScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16.0, 0.0, 24.0, 24.0),
+          padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 24.0),
           child: Consumer<SettingsNotifier>(
             builder: (context, notifier, child) => Column(
               children: [

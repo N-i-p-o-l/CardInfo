@@ -19,7 +19,10 @@ class InputModeScreen extends StatelessWidget {
               child: InkWell(
                 child: const Padding(
                   padding: EdgeInsets.all(12.0),
-                  child: Icon(Icons.settings),
+                  child: Icon(
+                    Icons.settings,
+                    color: Colors.grey,
+                  ),
                 ),
                 onTap: () {
                   context.router.push(const SettingsRoute());

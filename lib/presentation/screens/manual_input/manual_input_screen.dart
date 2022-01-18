@@ -117,17 +117,15 @@ class _ManualInputScreenState extends State<ManualInputScreen> {
                                     flex: 1,
                                     child: MaterialButton(
                                       elevation: 2,
+                                      color: Colors.lightBlue,
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(4)),
+                                            Radius.circular(4),),
                                       ),
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Icon(
-                                          Icons.arrow_back_rounded,
-                                          color: Colors.black,
-                                          size: 16,
-                                        ),
+                                      child: const Icon(
+                                        Icons.arrow_back_rounded,
+                                        color: Colors.white,
+                                        size: 16,
                                       ),
                                       onPressed: () {
                                         context.router.pop();

@@ -19,9 +19,9 @@ class CardInfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Card(
-        elevation: 2,
+    return Card(
+      elevation: 2,
+      child: InkWell(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -60,8 +60,10 @@ class CardInfoWidget extends StatelessWidget {
             ],
           ),
         ),
+        onTap: () {
+          onPressed();
+        },
       ),
-      onTap: () => onPressed,
     );
   }
 }

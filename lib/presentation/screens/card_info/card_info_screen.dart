@@ -3,6 +3,7 @@ import 'package:card_info/presentation/screens/card_info/widgets/card_info.dart'
 import 'package:card_info/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CardInfoScreen extends StatelessWidget {
   const CardInfoScreen({
@@ -28,16 +29,25 @@ class CardInfoScreen extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                child: AspectRatio(
-                  aspectRatio: 1.58,
-                  child: Card(
-                    elevation: 2,
-                    color: AppThemes.primarySwatch.shade800,
-                    child: Center(
-                      child: Text(
-                        cardNumber,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.headline6,
+                child: Padding(
+                  padding: const EdgeInsets.all(32.0),
+                  child: AspectRatio(
+                    aspectRatio: 1.58,
+                    child: Card(
+                      elevation: 2,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      color: AppThemes.primarySwatch.shade800,
+                      child: Center(
+                        child: Text(
+                          cardNumber,
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline6
+                              ?.copyWith(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
@@ -49,7 +59,7 @@ class CardInfoScreen extends StatelessWidget {
                 icon: Icons.credit_card_rounded,
                 title: cardInfo.brand,
                 desc: 'Type: ${cardInfo.type}',
-                onPressed: () {},             
+                onPressed: () {},
               ),
               const SizedBox(height: 4.0),
               CardInfoWidget(
@@ -57,7 +67,9 @@ class CardInfoScreen extends StatelessWidget {
                 icon: Icons.home_rounded,
                 title: cardInfo.bank.name,
                 desc: cardInfo.bank.url,
-                onPressed: () {},             
+                onPressed: () {
+                  _launchURL(context, cardInfo.bank.url);
+                },
               ),
               const SizedBox(height: 4.0),
               CardInfoWidget(
@@ -65,11 +77,22 @@ class CardInfoScreen extends StatelessWidget {
                 icon: Icons.place_rounded,
                 title: cardInfo.country.name,
                 desc: 'Currency: ${cardInfo.country.currency}',
-                onPressed: () {},     
+                onPressed: () {},
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+Future<void> _launchURL(BuildContext context, String url) async {
+  final bool success = await launch('http://$url', forceWebView: true);
+  if (!success) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(tr('error')),
       ),
     );
   }
