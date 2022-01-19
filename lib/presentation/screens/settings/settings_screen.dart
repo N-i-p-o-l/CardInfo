@@ -1,3 +1,4 @@
+import 'package:card_info/common/constants.dart';
 import 'package:card_info/presentation/screens/settings/provider/settings_notifier.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,7 @@ class _SettingsScreenDartState extends State<SettingsScreen> {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: Text(
-                      tr('version_title') + ' 1.0.0',
+                      tr('version_title') + ' $appVersion',
                       style: Theme.of(context).textTheme.headline6,
                     ),
                   ),
